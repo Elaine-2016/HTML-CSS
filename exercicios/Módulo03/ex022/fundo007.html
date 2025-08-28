@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posicionamento</title>
+    <title>Fundo Fixo de Tela</title>
     <style>
         body{
             height: 100vh;
@@ -12,12 +12,18 @@
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;/* auto(o navegador decide o tamanho da imagem),tamanho fixo em px ou % da tela, contain(adapata o tamanho da imagem em 100% da tela tentando não cortar) cover(adapta a imagem ao tamanho total da tela mesmo que tenha que cortar)*/
-
+            background-attachment: fixed;/* scroll valor padrão(rolou o conteudo rolou o fundo), fixed(rola o conteudo a tela tem o fundo fixo)*/           
         }
+        
+        /*shortHand Background: 
+            color > image > position > repeat > [size - está no material da w3c mas na pratica não funciona] > attachment
+            background: black url("imagens/wallpaper002.jpg") center center no-repeat fixed;
+            background-size: cover;
+        */
 
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
